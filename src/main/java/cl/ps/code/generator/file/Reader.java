@@ -45,7 +45,11 @@ public class Reader {
                 String[] register = StringUtils.split(l, ",");
                 if(register == null || register.length < 2)
                     throw new QrGeneratorRuntimeException("El formato de archivo de entrada es incorrecto");
-                csvfile.getRegisters().add(new Register(register[0], register[1]));
+                StringBuilder builder = new StringBuilder();
+                for(int i = 1; i < register.length; i++) {
+                    builder.append(register[i]).append(";");
+                }
+                csvfile.getRegisters().add(new Register(register[0], StringUtils.removeEnd(builder.toString(), ";")));
             });
             return csvfile;
         }
