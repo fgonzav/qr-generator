@@ -1,5 +1,6 @@
-package cl.ps.codigo.qrgenerator.model;
+package cl.ps.code.generator.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Getter;
@@ -13,6 +14,7 @@ public class CsvFile {
     
     public CsvFile() {
         super();
+        registers = new ArrayList<>();
     }
     
     private List<Register> registers;

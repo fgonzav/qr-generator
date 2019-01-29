@@ -1,4 +1,4 @@
-package cl.ps.codigo.qrgenerator;
+package cl.ps.code.generator;
 
 /**
  * Hello world!
